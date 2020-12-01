@@ -65,11 +65,11 @@ namespace SympliTest.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Call an API and check Staus")]
+        [NUnit.Framework.DescriptionAttribute("Call an API and check Stauscode")]
         [NUnit.Framework.CategoryAttribute("api")]
-        public virtual void CallAnAPIAndCheckStaus()
+        public virtual void CallAnAPIAndCheckStauscode()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Call an API and check Staus", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Call an API and check Stauscode", new string[] {
                         "api"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
