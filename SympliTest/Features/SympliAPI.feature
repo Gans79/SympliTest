@@ -1,7 +1,7 @@
 ﻿Feature: SympliAPI
 
 @api
-Scenario: Call an API and check Stauscode
+Scenario: Call an API and check Status
 	Given I create a client with an endpoint
 	And I add the headers to the request
 	When I execute the 'Get' request
