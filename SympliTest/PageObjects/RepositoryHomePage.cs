@@ -22,6 +22,14 @@ namespace TestUIAutomation.PageObjects
         [FindsBy(How = How.XPath, Using = "//div[contains(@class,'shown')]//button[contains(text(),'Create pull request')]")]
         private IWebElement _btnCreatePullRequest;
 
+        [FindsBy(How = How.XPath, Using = "//h3[text()='There isn’t anything to compare.']")]
+        private IWebElement _errorNothingToCompare;
+
+        [FindsBy(How = How.XPath, Using = "//div[contains(@class,'my-3 Box')]//a[contains(@class,'btn btn-primary')]")]
+         private IWebElement _btnViewPullRequest;
+
+
+
         public RepositoryHomePage(IWebDriver driver)
         {
             _driver = driver;
@@ -47,6 +55,18 @@ namespace TestUIAutomation.PageObjects
         {
             Utility.Wait(_btnCreatePullRequest);
             return _btnCreatePullRequest.Displayed;
+        }
+
+        public bool CheckIfErrorMessageIsDisplayed()
+        {
+            Utility.Wait(_errorNothingToCompare);
+            return _errorNothingToCompare.Displayed;
+        }
+
+        public bool CheckIfViewPullRequestButtonEnabled()
+        {
+            Utility.Wait(_btnViewPullRequest);
+            return _btnViewPullRequest.Displayed;
         }
 
     }

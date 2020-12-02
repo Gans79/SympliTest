@@ -61,7 +61,27 @@ namespace TestUIAutomation.Features
             Assert.IsTrue(createPullRequestEnabled, "Create pull request button is not enabled!");
         }
 
+        [Then(@"I validate if Create pull request button is disabled")]
+        public void ThenIValidateIfCreatePullRequestButtonIsDisabled()
+        {
+            var createPullRequestEnabled = _repositoryHomePage.CheckIfCreatePullRequestButtonEnabled();
+            Assert.IsFalse(createPullRequestEnabled, "Create pull request button is enabled!");
+        }
 
+        [Then(@"Display error message that both branches are same")]
+        public void ThenDisplayErrorMessageThatBothBranchesAreSame()
+        {
+            var errorMessageDisplayed = _repositoryHomePage.CheckIfErrorMessageIsDisplayed();
+            Assert.IsTrue(errorMessageDisplayed);
+        }
+
+
+        [Then(@"I validate if View pull request button is enabled")]
+        public void ThenIValidateIfViewPullRequestButtonIsEnabled()
+        {
+            var viewPullRequestEnabled = _repositoryHomePage.CheckIfViewPullRequestButtonEnabled();
+            Assert.IsTrue(viewPullRequestEnabled);
+        }
 
 
     }
