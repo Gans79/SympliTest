@@ -4,8 +4,13 @@ Automation Tool : Visual Studio NUnit , Specflow
 
 Setup steps: 
 
-Install Visual Studio 
+Install Visual Studio 2019
+Add extension Nunit Test Adapter, Specflow 
 
-Run Steps in CLI :
-open solution : TestUIAutomation.sln
-open test Explorer and run the tests 
+
+Run Tests :
+Open solution : TestUIAutomation.sln
+Build solution 
+Test will appear in Test Explorer 
+UI Test : GitPullRequestFeature
+Api Test : SympliAPIFeature
